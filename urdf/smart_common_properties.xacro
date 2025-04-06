@@ -21,10 +21,7 @@
         <color rgba="0.5 0.5 0.5 1" />
     </material>
 
-    <!-- https://en.wikipedia.org/wiki/List_of_moments_of_inertia#List_of_3D_inertia_tensors-->
-    <!--
-    https://docs.ros.org/en/jazzy/Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html-->
-    <xacro:macro name="box_inertia"
+        <xacro:macro name="box_inertia"
         params="m l w h xyz rpy">
         <inertial>
             <origin xyz="${xyz}" rpy="${rpy}" />
@@ -54,5 +51,4 @@
                 iyz="0" izz="${(2/5) * m * (r*r)}" />
         </inertial>
     </xacro:macro>
-
 </robot>
